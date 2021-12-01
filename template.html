@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spout - a simple caveflying game</title>
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+      max-width: 75%;
+      margin: auto;
+      background: url(small.png) no-repeat 86% 2px;
+    }
+
+    h1 {
+      font-size: 1.6em;
+      text-align: center;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      border-bottom: thin solid black;
+      margin-top: 0.1em;
+    }
+
+    h3 {
+      border: thin solid black;
+      margin: auto;
+      background: #cd2f2f;
+      max-width: 15em;
+      text-align: center;
+      padding: 0.2em;
+      margin-bottom: 0.3em;
+    }
+
+    h3:hover {
+      background: #ff9657;
+    }
+
+    h3 a {
+      color: black;
+      text-decoration: none
+    }
+
+    h3 a:hover {
+      text-decoration: underline
+    }
+
+    img {
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body style="background:#CCC">
+  <center>Running on the <a href="https://mattiasgustavsson.itch.io/dos-like">dos-like</a> framework.</center>
+  <center>Source code available on <a href="https://github.com/jorisvddonk/spout-for-dos-like">github</a>.</center>
+  <center>Based on <a href="https://njw.me.uk/spout/">Nick White's version of Spout</a>. Original by Kuni.</center>
+  <center>Controls: <em>left</em> - rotate left, <em>right</em> - rotate right, <em>space</em> - thrust</center>
+  <div id="wa_log">
+    <h2>
+      <center>Loading...</center>
+    </h2>
+  </div>
+  <canvas id="wa_canvas" style="display:block;margin:0 auto;width:1088px;max-width:100%"
+    oncontextmenu="event.preventDefault()" width="1088" height="768"></canvas>
+  <script type='text/javascript'>
+    var WA =
+    {
+      canvas: document.getElementById('wa_canvas'),
+      print: (msg) => console.log(msg),
+      error: function (code, msg) {
+        var L = {
+          BOOT: 'Error during startup. Your browser might not support WebAssembly. Please update it to the latest version.',
+          WEBGL: 'Your browser or graphics card does not seem to support <a href="http://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation" style="color:#EEE">WebGL</a>.<br>Find out how to get it <a href="http://get.webgl.org/" style="color:#EEE">here</a>.',
+          CRASH: 'dos-like crashed.',
+          MEM: 'dos-like ran out of memory.',
+          EXIT: 'Shutdown',
+        };
+        var w = WA.canvas.clientWidth, h = WA.canvas.clientHeight, p = (h / 2 - 30), c = L[code] + (code != 'EXIT' ? '<br><br><sub>(' + msg + ')</sub>' : '');
+        WA.canvas.outerHTML = '<div style="text-align:center;background:#000;color:#888' + (h ? ';margin:0 auto;width:' + w + 'px;height:' + (h - p) + 'px;padding-top:' + p + 'px' : '') + '">' + c + '</div>';
+      },
+      started: function () {
+        document.getElementById('wa_log').innerHTML = '';
+      },
+    };
+    {{{js}}}
+  </script>
+</body>
+
+</html>
