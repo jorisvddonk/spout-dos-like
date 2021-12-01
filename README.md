@@ -4,6 +4,8 @@ Spout (dos-like)
 Spout is a simple caveflying game. The aim is to get as high as
 possible, avoiding or destroying obstacles.
 
+![game screenshot](./screenshot.png)
+
 Controls
 --------
 
@@ -33,6 +35,12 @@ http://mooses.nl/misc/spout-doslike
 
 Compiling
 ---------
+
+To compile on Windows (using clang 13):
+
+```
+clang -target x86_64-pc-windows-gnu spout.c ./vendor/dos.c -lgdi32 -luser32 -lwinmm -o spout.exe
+```
 
 To compile for the web:
 
