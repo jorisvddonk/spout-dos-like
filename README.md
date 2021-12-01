@@ -25,7 +25,7 @@ under the MIT license.
 In 2004 a 'unix version' was released, which mostly just slapped
 autotools into the windows version and infringed the license.
 
-This is a [Dos-Like](https://mattiasgustavsson.itch.io/dos-like) version, based on Nick's new unix version, based on the original Windows code by kuni.
+This is a [Dos-Like](https://mattiasgustavsson.itch.io/dos-like) version, based on [Nick's new unix version](https://njw.me.uk/spout/), based on the original Windows code by kuni.
 
 Demo
 ----
