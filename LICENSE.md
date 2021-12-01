@@ -141,7 +141,7 @@ SOFTWARE.
 
 
 ------------------------------------------------------------------------------
-dos.h, and the other .h files in the libs folder are licensed under the following license:
+dos.h, and the other .h files in the vendor/libs folder are licensed under the following license:
 
 MIT License
 

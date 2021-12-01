@@ -8,7 +8,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <math.h>
-#include "dos.h"
+#include "vendor/dos.h"
 #include "spout.h"
 #include "sintable.h"
 #include "font.h"
