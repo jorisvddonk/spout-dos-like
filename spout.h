@@ -1,4 +1,4 @@
-/* See COPYING file for copyright, license and warranty details */
+/* See LICENSE.md file for copyright, license and warranty details */
 
 #define zoom 2
 #define FB_WIDTH 128

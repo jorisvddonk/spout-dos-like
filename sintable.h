@@ -1,4 +1,4 @@
-/* See COPYING file for copyright, license and warranty details */
+/* See LICENSE.md file for copyright, license and warranty details */
 
 short sintable[1024]={
 	0,		25,		50,		75,		101,	126,	151,	176,
