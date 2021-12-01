@@ -27,3 +27,21 @@ This is a [Dos-Like](https://mattiasgustavsson.itch.io/dos-like) version, based 
 
 Demo
 ----
+http://mooses.nl/misc/spout-doslike
+
+
+
+Compiling
+---------
+
+To compile for the web:
+
+```
+wasm\node wasm\wajicup.js -template template.html spout.c dos.c spout.html
+```
+
+A WebAssembly build environment is required. You can download it (for Windows) here: [github.com/mattiasgustavsson/dos-like/releases/tag/wasm-env](https://github.com/mattiasgustavsson/dos-like/releases/tag/wasm-env).
+Unzip it so that the `wasm` folder in the zip file is at your repository root. 
+
+The wasm build environment is a compact distribution of [node](https://nodejs.org/en/download/), [clang/wasm-ld](https://releases.llvm.org/download.html),
+[WAjic](https://github.com/schellingb/wajic) and [wasm system libraries](https://github.com/emscripten-core/emscripten/tree/main/system).
